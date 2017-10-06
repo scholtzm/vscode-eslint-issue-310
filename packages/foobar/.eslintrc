@@ -1,0 +1,17 @@
+{
+  "extends": [
+    "airbnb-base"
+  ],
+  "rules": {
+    // We need to override this since we load dev dep in etc folder
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "etc/**"
+        ],
+        "optionalDependencies": false
+      }
+    ]
+  }
+}
